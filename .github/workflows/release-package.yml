@@ -14,10 +14,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 12
-      - run: |
-          echo "@gcto:registry=https://npm.pkg.github.com" > .npmrc
-          echo "//npm.pkg.github.com/:_authToken=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" >> .npmrc
-          npm ci
+      - run: npm ci
       - run: npm test
   publish-gpr:
     needs: build
