@@ -1,6 +1,6 @@
 {
   "name": "@gcto/firebase-hooks",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Hooks for firebase",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
@@ -14,6 +14,10 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcto/firebase-hooks.git"
   },
   "keywords": [],
   "author": "Alex <alex@gcto.ca>, Alain <alain@gcto.ca>",
