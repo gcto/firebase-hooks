@@ -1,7 +1,7 @@
 {
-  "name": "@gcto/npm-package-template",
-  "version": "0.0.4",
-  "description": "package template for npm packages",
+  "name": "@gcto/firebase-hooks",
+  "version": "0.0.5",
+  "description": "Hooks for firebase",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
   "scripts": {
