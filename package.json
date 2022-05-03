@@ -1,6 +1,6 @@
 {
   "name": "@gcto/firebase-hooks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Hooks for firebase",
   "main": "lib/index.js",
   "types": "lib/index.d.js",

@@ -1,2 +1,4 @@
-export * as functions from "./main/services";
-export * as interfaces from "./main/interfaces";
+export * from "./main/boot";
+export * from "./main/services";
+export * from "./main/hooks";
+export * from "./main/interfaces";
