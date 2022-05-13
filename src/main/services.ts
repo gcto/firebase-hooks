@@ -1,5 +1,5 @@
 import { Observer } from "@gcto/swrv-hooks/lib";
-import firebase from "firebase/compat";
+import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
 import "firebase/compat/functions";
