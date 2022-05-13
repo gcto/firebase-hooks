@@ -1,9 +1,9 @@
 import { Observer } from "@gcto/swrv-hooks/lib";
-import firebase from "firebase";
-import "firebase/firestore";
-import "firebase/storage";
-import "firebase/functions";
-import "firebase/database";
+import firebase from "firebase/compat";
+import "firebase/compat/firestore";
+import "firebase/compat/storage";
+import "firebase/compat/functions";
+import "firebase/compat/database";
 import { DocumentData, FirebaseUser, FirestoreQuery } from "./interfaces";
 
 export async function signInWithCustomToken(token: string) {

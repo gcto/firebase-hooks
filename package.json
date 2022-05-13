@@ -1,6 +1,6 @@
 {
   "name": "@gcto/firebase-hooks",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Hooks for firebase",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@gcto/swrv-hooks": "^0.0.4",
-    "firebase": "^8.7.0",
+    "firebase": "^9.8.1",
     "vue": "^3"
   },
   "devDependencies": {
