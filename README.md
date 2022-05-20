@@ -19,7 +19,7 @@ npm i @gcto/firebase-hooks
 **Setup with Quasar**
 
 ```ts
-// quasar/src/boot
+// <directory base>/src/boot/<filename>.ts
 import { firebaseInit } from "@gcto/firebase-hooks";
 import { boot } from "quasar/wrappers";
 export default boot(({ app }) => {
@@ -35,6 +35,12 @@ export default boot(({ app }) => {
     });
   });
 });
+```
+Add <filename> to boot in <directory base>/quasar.conf.js
+```
+//quasar.conf.js
+  
+boot: ['<filename>', 'axios'],
 ```
 
 **Create Collection**
@@ -55,3 +61,4 @@ useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
 // QUERY FROM COLLECTION
 useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
 ```
+<Dog> refers to the file type, "dog" refers to the collection, and "dog_id" refers to the file ID.
