@@ -53,5 +53,13 @@ useFirestoreCollection<Dog>("dog");
 useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
 
 // QUERY FROM COLLECTION
-useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
+useFirestoreDoc<Dog>("dog", ()=>({
+  where:[
+    "name","==", "b" // OR "<", ">", "!=", ETC
+  ],
+  orderBy:[
+    "name", "asc" // OR "desc" FOR DESCENDING
+  ],
+  limit: 4
+})),
 ```
