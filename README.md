@@ -37,29 +37,39 @@ export default boot(({ app }) => {
 });
 ```
 
+**Firebase Auth**
+setup(){
+  const user = useFirebaseUser();
+  return { user }
+}
+
 **Create Collection**
 
 ```ts
-// PROVIDE TYPE
-type Dog = {
-  name: string;
-  breed: string;
-};
+setup(){
+  // PROVIDE TYPE
+  type Dog = {
+    name: string;
+    breed: string;
+  };
 
-// GET ALL IN COLLECTION
-useFirestoreCollection<Dog>("dog");
+  // GET ALL IN COLLECTION
+  const dogCollection = useFirestoreCollection<Dog>("dog");
 
-// GET ONE IN COLLECTION
-useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
+  // GET ONE IN COLLECTION
+  const dog = useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
 
-// QUERY FROM COLLECTION
-useFirestoreDoc<Dog>("dog", ()=>({
-  where:[
-    "name","==", "b" // OR "<", ">", "!=", ETC
-  ],
-  orderBy:[
-    "name", "asc" // OR "desc" FOR DESCENDING
-  ],
-  limit: 4
-})),
+  // QUERY FROM COLLECTION
+  const dogsNamedFido = useFirestoreDoc<Dog>("dog", ()=>({
+    where:[
+      "name","==", "fido" // OR "<", ">", "!=", ETC
+    ],
+    orderBy:[
+      "name", "asc" // "asc" FOR ASCENDING OR "desc" FOR DESCENDING
+    ],
+    limit: 4
+  })),
+  
+  return { dogCollection, dog, dogsNamedFido }
+}
 ```
