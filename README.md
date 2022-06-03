@@ -38,10 +38,13 @@ export default boot(({ app }) => {
 ```
 
 **Firebase Auth**
+```ts
 setup(){
-  const user = useFirebaseUser();
+  const user = useFirebaseUser(); // HOOK FOR CURRENT USER
+  
   return { user }
 }
+```
 
 **Create Collection**
 
