@@ -4,6 +4,7 @@ import "firebase/compat/firestore";
 import "firebase/compat/storage";
 import "firebase/compat/functions";
 import "firebase/compat/database";
+import "firebase/compat/auth";
 import { DocumentData, FirebaseUser, FirestoreQuery } from "./interfaces";
 
 export async function signInWithCustomToken(token: string) {
