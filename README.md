@@ -57,7 +57,7 @@ setup(){
   const dogCollection = useFirestoreCollection<Dog>("dog");
 
   // GET ONE IN COLLECTION
-  const dog = useFirestoreDoc<Dog>("dog", ()=>"dog_id"),
+  const dog = useFirestoreDoc<Dog>("dog", ()=>"dog_id");
 
   // QUERY FROM COLLECTION
   const dogsNamedFido = useFirestoreDoc<Dog>("dog", ()=>({
@@ -68,8 +68,8 @@ setup(){
       "name", "asc" // "asc" FOR ASCENDING OR "desc" FOR DESCENDING
     ],
     limit: 4
-  })),
+  }));
   
-  return { dogCollection, dog, dogsNamedFido }
+  return { dogCollection, dog, dogsNamedFido };
 }
 ```
