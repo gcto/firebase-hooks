@@ -63,7 +63,7 @@ setup(){
   const dog = useFirestoreDoc<Dog>("dog", ()=>"dog_id");
 
   // QUERY FROM COLLECTION
-  const dogsNamedFido = useFirestoreDoc<Dog>("dog", ()=>({
+  const dogsNamedFido = useFirestoreCollection<Dog>("dog", ()=>({
     where:[
       "name","==", "fido" // OR "<", ">", "!=", ETC
     ],
