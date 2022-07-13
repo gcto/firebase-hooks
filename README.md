@@ -40,7 +40,7 @@ export default boot(({ app }) => {
 **Firebase Auth**
 ```ts
 setup(){
-  const user = useFirebaseUser(); // HOOK FOR CURRENT USER
+  const { data: user } = useFirebaseUser(); // HOOK FOR CURRENT USER
   
   return { user }
 }
@@ -57,13 +57,13 @@ setup(){
   };
 
   // GET ALL IN COLLECTION
-  const dogCollection = useFirestoreCollection<Dog>("dog");
+  const { data: dogCollection } = useFirestoreCollection<Dog>("dog");
 
   // GET ONE IN COLLECTION
-  const dog = useFirestoreDoc<Dog>("dog", ()=>"dog_id");
+  const { data: dog } = useFirestoreDoc<Dog>("dog", ()=>"dog_id");
 
   // QUERY FROM COLLECTION
-  const dogsNamedFido = useFirestoreCollection<Dog>("dog", ()=>({
+  const { data: dogsNamedFido } = useFirestoreCollection<Dog>("dog", ()=>({
     where:[
       "name","==", "fido" // OR "<", ">", "!=", ETC
     ],
